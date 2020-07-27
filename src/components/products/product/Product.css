@@ -1,0 +1,200 @@
+.product__item {
+    width: calc((100% - 48px) / 4);
+    padding: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid #BDBDBD;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+
+.product__item h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+    margin: 16px 0;
+}
+.product__item header {
+    overflow: hidden;
+    width: 100%;
+}
+.product__item img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.information {
+    margin-bottom: 32px;
+}
+.information .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+
+.information .row:last-child {
+    margin-bottom: 0;
+}
+
+.information .title {
+    min-width: 60px;
+    color: #000000;
+    margin: 0 16px 0 0;
+}
+.information p {
+    color: #8D8D8D;
+    margin: 0;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.bottom .cost {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #00897B;
+    margin-bottom: 16px;
+}
+
+.functions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.functions .btn {
+    display: block;
+    width: 90px;
+    padding: 5px;
+    background: #00897B;
+    border-radius: 4px;
+    border: 1px solid #00897B;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+.functions .btn:hover {
+    background: #FFFFFF;
+    color: #00897B;
+}
+.functions .inf {
+    position: relative;
+
+}
+.functions .description {
+    display: none;
+    width: 133px;
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px 8px 46px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+}
+.functions .inf .icon {
+    position: relative;
+    cursor: pointer;
+    z-index: 11;
+}
+.functions .inf:hover .icon svg path{
+    fill: #00897B;
+}
+.functions .inf:hover .description {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+@media screen and (min-width: 1200px){
+    .product__item:nth-child(4n){
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .product__item:nth-child(3n){
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .product__item:nth-child(3n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    .product__item:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+   
+    .product__item {
+        width: calc((100% - 32px) / 3);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .product__item {
+        width: calc((100% - 16px) / 2);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .product__item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
