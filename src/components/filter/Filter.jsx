@@ -1,6 +1,7 @@
 import React from 'react';
 import './Filter.css';
 import Dropdown from "../dropdown/Dropdown";
+
 const filters = [
     {
         id: 1,
@@ -68,6 +69,7 @@ const filters = [
             }
         ]
     }];
+
 function Filter() {
 
     return (
@@ -77,11 +79,12 @@ function Filter() {
             <ul className="filter__list">
                 {filters.map((item, index) => (
                     <li className="filter__item" key={item.id}>
-                        <Dropdown title={item.category} chilldren={index} items={item.params} />
+                        <Dropdown title={item.category} chilldren={index} items={item.params}/>
                     </li>
                 ))}
             </ul>
         </section>
     );
 }
+
 export default Filter;

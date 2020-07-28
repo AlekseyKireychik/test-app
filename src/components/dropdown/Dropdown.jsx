@@ -11,17 +11,17 @@ function Dropdown({title, items, chilldren}) {
     return (
         <div className="dropdown">
             {open ? (
-            <div className="dropdown__head open"
-                 role="button"
-                 onKeyPress={() => toggle(!open)}
-                 onClick={() => toggle(!open)}>
-                <p>{title}</p>
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                <div className="dropdown__head open"
+                     role="button"
+                     onKeyPress={() => toggle(!open)}
+                     onClick={() => toggle(!open)}>
+                    <p>{title}</p>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 8L0.803848 0.500001L11.1962 0.5L6 8Z" fill="#C4C4C4"/>
-                </svg>
+                        <path d="M6 8L0.803848 0.500001L11.1962 0.5L6 8Z" fill="#C4C4C4"/>
+                    </svg>
 
-            </div>
+                </div>
             ) : (<div className="dropdown__head"
                       role="button"
                       onKeyPress={() => toggle(!open)}
@@ -35,7 +35,8 @@ function Dropdown({title, items, chilldren}) {
                 <ul className="dropdown__list">
                     {items.map(item => (
                         <li className="dropdown__item" key={item.id}>
-                            <Checkbox label={item.value} selected={acceptance} nameId={`filter-check-${chilldren}-${item.id}`} onChange={setСhange} />
+                            <Checkbox label={item.value} selected={acceptance}
+                                      nameId={`filter-check-${chilldren}-${item.id}`} onChange={setСhange}/>
                         </li>
                     ))}
                 </ul>
@@ -43,6 +44,7 @@ function Dropdown({title, items, chilldren}) {
         </div>
     );
 }
+
 Dropdown.propTypes = {
     title: PropTypes.string,
     items: PropTypes.array.isRequired,

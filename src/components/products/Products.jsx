@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from "./product/Product";
 import './Products.css';
+
 const productList = [
     {
         id: 1,
@@ -49,7 +50,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 3,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -72,7 +73,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 4,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -95,7 +96,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 5,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -118,7 +119,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 6,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -141,7 +142,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 7,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -164,7 +165,7 @@ const productList = [
                 text: 'Is simply',
             }
         ]
-    },{
+    }, {
         id: 8,
         image: 'prod-img.jpg',
         title: 'Is simply',
@@ -193,16 +194,17 @@ function Products() {
     return (
         <div className="product">
             <ul className="product__list">
-                                {productList.map(elem => (
-                                    <Product key={elem.id} 
-                                    image={elem.image} 
-                                    title={elem.title} 
-                                    information={elem.information} 
-                                    cost={elem.cost} 
-                                    children={elem.description}/>
-                                ))}
+                {productList.map(elem => (
+                    <Product key={elem.id}
+                             image={elem.image}
+                             title={elem.title}
+                             information={elem.information}
+                             cost={elem.cost}
+                             children={elem.description}/>
+                ))}
             </ul>
         </div>
     );
 }
+
 export default Products;
